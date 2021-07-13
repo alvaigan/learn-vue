@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <!-- Generally method, without Vue: -->
+    <h1>Hello World, I'm Alvaigan starting to learn Vue js</h1>
+
+    <!-- Using Vue: -->
+    <h1 style="color: green;"> {{message}} </h1>
+
+    <script type="text/javascript">
+      var vm  = new Vue({
+        el: '#app',
+        data: {
+          message: `I'm using Vue Now`
+        }
+      })
+
+      console.log(vm.$el) // jika ingin liat struktur tag sebenarnya
+    </script>
+
+    <!-- 
+      Summary:
+      - Untuk pengembangan skala besar gunakan Vue cli, pakai npm, yarn dll.
+      - property "el" di object atas, gunanya untuk menunjukkan target ke id yang ada di html
+      - selain pakai "el", bisa juga pake $mount. misal, vm.$mount('#app')
+     -->
+  </div>
+</body>
+</html>
